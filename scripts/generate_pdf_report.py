@@ -323,22 +323,23 @@ def generate_report(data, output_path):
     story = []
 
     # ==================== PAGE 1: COVER ====================
-    story.append(Spacer(1, 20))
+    story.append(Spacer(1, 1.2 * inch))
     story.append(Paragraph("Sales Pipeline Report", styles["CoverTitle"]))
-    story.append(Spacer(1, 4))
+    story.append(Spacer(1, 40))
     story.append(Paragraph(f"<b>{report_date}</b>", styles["CoverSubtitle"]))
 
     pipeline_health = data.get("pipeline_health", {})
     total_prospects = pipeline_health.get("total_prospects", 0)
     if total_prospects:
+        story.append(Spacer(1, 30))
         story.append(Paragraph(f"{total_prospects} Prospects Analyzed", styles["CoverSubtitle"]))
-    story.append(Spacer(1, 20))
+    story.append(Spacer(1, 60))
 
     # Overall pipeline score gauge
     overall_score = data.get("overall_pipeline_score", 0)
     gauge = draw_score_gauge(overall_score)
     story.append(gauge)
-    story.append(Spacer(1, 16))
+    story.append(Spacer(1, 40))
 
     # Executive Summary
     summary = data.get("executive_summary", "")
