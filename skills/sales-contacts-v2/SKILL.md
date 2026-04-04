@@ -42,6 +42,7 @@ Search 4: "[company name] VP Marketing CMO LinkedIn"
 Search 5: "[company name] Head of [relevant department] LinkedIn"
 Search 6: "[company name] Director [relevant function] LinkedIn"
 Search 7: "[company name] [specific title from team page] LinkedIn"
+Search 8: "[company name] [Duration of the role] LinkedIn"
 ```
 
 **For each person found, capture:**
