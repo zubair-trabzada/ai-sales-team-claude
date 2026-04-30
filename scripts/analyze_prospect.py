@@ -12,7 +12,6 @@ import argparse
 import json
 import re
 import ssl
-import sys
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
